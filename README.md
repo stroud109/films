@@ -20,13 +20,11 @@ I'm using Backbone to tie together my API, autocomplete search and geocoding fea
 
 ###Plugins
 
-####Typeahead
-#####Autocomplete Search
+####Typeahead – Autocomplete Search
 
 I'm using Bootstrap's [Typeahead](https://github.com/twitter/typeahead.js/) for the autocomplete and dropdown functionality. Styles for the Typeahead plugin come from [here](https://github.com/hyspace/typeahead.js-bootstrap3.less/).
 
-####Google Maps
-#####Geocoding
+####Google Maps – Geocoding
 
 The [Film data](https://data.sfgov.org/Arts-Culture-and-Recreation-/Film-Locations-in-San-Francisco/yitu-d5am) doesn't include latitude or longitude, so I need to use an API that includes geocoding (the translation of addresses or landmarks to lat/long positions). I use Google Maps JavaScript API v3 for dynamic geocoding, and I've modified functionality from [here](http://stackoverflow.com/questions/19640055/multiple-markers-google-map-api-v3-from-array-of-addresses-and-avoid-over-query) to display multiple map markers simultaneously.
 
