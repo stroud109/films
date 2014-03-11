@@ -6,6 +6,8 @@ Film Locations is a single page web app where users can search for movies shot i
 
 This web app uses Flask, Backbone and Google Maps JavaScript API v3.
 
+Demo the app [here](http://limitless-lake-7183.herokuapp.com/#).
+
 ###API
 
 I have a JSON API with a single endpoint, "/search", that returns a set of movie results based on a query parameter. The results are formatted as an array of objects for easier integration with Backbone.
