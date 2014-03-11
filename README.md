@@ -1,5 +1,7 @@
 #Film Locations in San Francisco
 
+###Overview
+
 Film Locations is a single page web app where users can search for movies shot in San Francisco and see specific filming locations.
 
 This web app uses Flask, Backbone and Google Maps JavaScript API v3.
