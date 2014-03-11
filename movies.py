@@ -31,13 +31,16 @@ def index():
     return render_template('index.html')
 
 
-@app.route('/backbone_starter')
-def backbone_starter():
-    return render_template('backbone_starter.html')
-
-
 @app.route('/search')
 def search():
+    '''
+    This route matches movie titles against the user query and returns
+    locations.
+
+    I lowercase the search query and the MOVIES data to prevent
+    case-sensititivity problems. This route returns a json object that's
+    used to add markers to the map.
+    '''
 
     search_term = request.args.get('q')
     search_term = search_term.lower()
