@@ -1,0 +1,110 @@
+html { height: 100% }
+body { height: 100%; margin: 0; padding: 0 }
+
+.body {
+text-align: center;
+text-shadow: 0 1px 3px rgba(0,0,0,.5);
+}
+
+.background {
+  background-image: url('../img/wild_oliva/wild_oliva.png');
+  text-shadow: none;
+}
+
+.top {
+  height: 100px;
+}
+
+.bottom {
+  height: 200px;
+}
+
+.text-header {
+  color: #E9E5DB;
+  font-size: 38px;
+  font-family: 'Raleway', sans-serif;
+  text-align: center;
+  text-shadow: 0 1px 3px rgba(0,0,0,.5);
+}
+
+.text-header:hover {
+  color: #E9E5DB;
+  font-size: 38px;
+  font-family: 'Raleway', sans-serif;
+  text-align: center;
+  text-shadow: 0 1px 3px rgba(0,0,0,.5);
+  text-decoration: none;
+}
+
+.search-view {
+  height: 100px;
+  /*vertical-align: bottom;*/
+}
+
+.map-border {
+  box-shadow: 0 1px 3px 3px rgba(0, 0, 0, 0.33);
+}
+
+#map-canvas {
+  height: 100%;
+}
+
+.map-container {
+  height: 75%;
+  margin-top: 3px;
+  margin-right: 12px;
+  margin-left: 12px;
+}
+
+@media (max-width: 768px) {
+  .top {
+    height: 50px;
+  }
+
+  .bottom {
+    height: 100px;
+  }
+
+  .text-header {
+  margin-right: 18px;
+  margin-left: 18px;
+  }
+
+  .search-form {
+  margin-right: 18px;
+  margin-left: 18px;
+  }
+
+  .map-container {
+  margin-top: 6px;
+  margin-right: 20px;
+  margin-left: 20px;
+  }
+}
+
+@media (max-width: 360px) {
+  .top {
+    height: 10px;
+  }
+
+  .bottom {
+    height: 20px;
+  }
+
+  .text-header {
+  color: #E6E6E6;
+  font-size: 25px;
+  text-align: center;
+  text-shadow: 0 1px 3px rgba(0,0,0,.5);
+  }
+
+  .search-form {
+  margin-right: 18px;
+  margin-left: 18px;
+  }
+
+  .map-container {
+  margin-top: 9px;
+  }
+}
+

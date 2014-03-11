@@ -1,5 +1,4 @@
 import json
-# import re
 
 from flask import (
     Flask,
@@ -10,10 +9,21 @@ from flask import (
 
 app = Flask(__name__)
 
-# write lev-distance-eqsue function here, and use it below
-
 with open('movies.json') as jsonfile:
     MOVIE_DATA = json.loads(jsonfile.read())
+
+    MOVIES = {}
+
+    for movie in MOVIE_DATA['data']:
+        title_lower = movie[8].lower()
+        location = movie[10]
+        if title_lower not in MOVIES:
+            MOVIES[title_lower] = {
+                'title': movie[8],
+                'locations': [{'address': location}]
+            }
+        else:
+            MOVIES[title_lower]['locations'].append({'address': location})
 
 
 @app.route('/')
@@ -28,29 +38,19 @@ def backbone_starter():
 
 @app.route('/search')
 def search():
-    '''
-    lev-distance-eqsue function will live here, and in `suggestions`.
-    This will use ajax
-    '''
 
-    # Search the file I loaded above, find things to return
-    # add them to the dictionary and then return them.
-    # return JSON string
-
-    searched_for = request.args.get('q')
-    searched_for = searched_for.lower()
+    search_term = request.args.get('q')
+    search_term = search_term.lower()
 
     results = []
 
-    for movie in MOVIE_DATA['data']:
-        if searched_for in movie[8].lower():
-            results.append({'title': movie[8], 'location': movie[10]})
+    if search_term:
+
+        for title, info in MOVIES.items():
+            if search_term in title:
+                results.append(info)
+
     return jsonify({'results': results})
-
-        # return results with lev-distance-esque function here
-        # movie title: data > (unnamed nested list) > item #9
-        # locations: data > (unnamed nested list) > item #11
-
 
 if __name__ == '__main__':
     app.run(
