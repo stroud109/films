@@ -17,6 +17,7 @@ text-shadow: 0 1px 3px rgba(0,0,0,.5);
 
 .bottom {
   height: 200px;
+
 }
 
 .text-header {
@@ -30,6 +31,22 @@ text-shadow: 0 1px 3px rgba(0,0,0,.5);
 .text-header:hover {
   color: #F5F2EC;
   font-size: 38px;
+  font-family: 'Raleway', sans-serif;
+  text-align: center;
+  text-shadow: 0 1px 3px rgba(0,0,0,.5);
+  text-decoration: none;
+}
+
+.bottom-text {
+  color: #F5F2EC;
+  font-family: 'Raleway', sans-serif;
+  text-align: center;
+  text-shadow: 0 1px 3px rgba(0,0,0,.5);
+  text-decoration: none;
+}
+
+.bottom-text:hover {
+  color: #F5F2EC;
   font-family: 'Raleway', sans-serif;
   text-align: center;
   text-shadow: 0 1px 3px rgba(0,0,0,.5);
@@ -107,3 +124,12 @@ text-shadow: 0 1px 3px rgba(0,0,0,.5);
   }
 }
 
+.mastfoot {
+position: relative;
+width: 100%;
+bottom: 0;
+}
+
+.inner {
+padding: 30px;
+}
