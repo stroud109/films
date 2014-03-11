@@ -32,6 +32,7 @@ $(function () {
     center: new google.maps.LatLng(37.7833, -122.4167),
     zoom: 11
   };
+
   var map = new google.maps.Map($('#map-canvas')[0], mapOptions);
 
   /**
@@ -39,13 +40,11 @@ $(function () {
    * markers on the map.
    */
   var Locations = Backbone.Collection.extend({
-
     parse: function (response) {
       if (response.results) {
         return response.results[0].locations;
       }
     }
-
   });
 
   var locations = new Locations();
@@ -57,7 +56,6 @@ $(function () {
    * new markers to the map.
    */
   var MapView = Backbone.View.extend({
-
     initialize: function () {
       locations.on('reset', this.render, this);
       this.markers = [];
@@ -112,7 +110,6 @@ $(function () {
    * Main router
    */
   var Router = Backbone.Router.extend({
-
     routes: {
       ':title': 'addMarkers',
       '': 'clearMarkers'
@@ -135,7 +132,6 @@ $(function () {
       locations.reset();
       searchInput.val('');
     }
-
   });
 
   var app = new Router();
