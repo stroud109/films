@@ -9,12 +9,10 @@ I built this web app using Flask, Backbone and Google Maps JavaScript API v3.
 Demo the app [here](http://limitless-lake-7183.herokuapp.com/#).
 
 ###API
-####(movies.py)
 
 I have a JSON API with a single endpoint, "/search", that returns a set of movie results based on a query parameter. The results are formatted as an array of objects for easier integration with Backbone.
 
 ###Backbone
-####(main.js)
 
 I'm using Backbone to tie together my API, autocomplete search and geocoding features.
 
